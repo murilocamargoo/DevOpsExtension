@@ -1,0 +1,19 @@
+{
+    "contributions": [
+        {
+            "id": "example-work-item-form-page",
+            "type": "ms.vss-work-web.work-item-form-page",
+            "description": "Nexer",
+            "targets": [
+              "ms.vss-work-web.work-item-form"
+            ],
+            "properties": {
+              "name": "Nexer",
+              "uri": "dist/WorkItemFormPage/WorkItemFormPage.html"
+            }
+          }
+    ],
+    "scopes": [
+        "vso.work"
+    ]
+}

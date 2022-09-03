@@ -24,6 +24,7 @@
     "test": "cross-env TEST_REPORT_FILENAME=test-results.xml jest --verbose"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "azure-devops-extension-api": "~1.157.0",
     "azure-devops-extension-sdk": "~2.0.11",
     "azure-devops-ui": "~2.164.0",
