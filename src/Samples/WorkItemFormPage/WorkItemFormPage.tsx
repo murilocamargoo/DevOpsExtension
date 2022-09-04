@@ -93,24 +93,31 @@ export class WorkItemFormGroupComponent extends React.Component<{}, WorkItemForm
     }
 
     private async onClick() {
-        const appToken = await SDK.getAppToken();
-        const response = await axios.get(`http://localhost:5000/Example?name=${this.state.name}`, {
-            headers: {
-                'Authorization': `Bearer ${appToken}`
+        const url = "https://prod-93.eastus.logic.azure.com:443/workflows/16cad36640104aa7b67f43ca6f8cefba/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=k40FKhSc-0gkC7iulyBE6C8p3oF8A-0IaqyD86dsX0s";
+        const workItemFormService = await SDK.getService<IWorkItemFormService>(WorkItemTrackingServiceIds.WorkItemFormService);
+        const jsonData = JSON.stringify({ID: (await workItemFormService.getId()).toString(), State: 'Active', Description: 'Teste'});
+        const customConfig = {
+            headers:{
+                'Content-Type': 'application/json'
             }
-        });
-        if (response.status === 200) {
+        };
+
+        const response = await axios.post(url, jsonData, customConfig);
+        if (response.status === 200 || response.status == 202) {
             const workItemFormService = await SDK.getService<IWorkItemFormService>(
                 WorkItemTrackingServiceIds.WorkItemFormService
             );
             workItemFormService.setFieldValue(
-                "System.Title",
-                `"${response.data}" set by extension`
+                "System.Description",
+                `"${(await workItemFormService.getFieldValue("System.Title")).toString()}" set by extension`
             );
             this.setState({ errorMessage: "" });
         } else {
             this.setState({ errorMessage: JSON.stringify(response) });
         }
+
+        
+
     }
 }
 

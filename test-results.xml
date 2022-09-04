@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite id="0" name="C:\Users\Murilo\Documents\GitHub\DevOpsExtension\src\Tests\WorkItemFormGroup\WorkItemFormGroup.test.tsx" errors="0" package="C:\Users\Murilo\Documents\GitHub\DevOpsExtension\src\Tests\WorkItemFormGroup\WorkItemFormGroup.test.tsx" hostname="localhost" tests="8" failures="0" time="1.557" timestamp="2022-09-03T12:07:53">
+  <testsuite id="0" name="C:\Users\Murilo\Documents\GitHub\DevOpsExtension\src\Tests\WorkItemFormGroup\WorkItemFormGroup.test.tsx" errors="0" package="C:\Users\Murilo\Documents\GitHub\DevOpsExtension\src\Tests\WorkItemFormGroup\WorkItemFormGroup.test.tsx" hostname="localhost" tests="8" failures="0" time="1.391" timestamp="2022-09-04T18:02:21">
     <properties>
     </properties>
     <testcase classname="WorkItemFormGroup" name="WorkItemFormGroupComponent - rendering" time="0">

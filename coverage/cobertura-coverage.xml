@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="35" lines-covered="34" line-rate="0.9714" branches-valid="3" branches-covered="3" branch-rate="1" timestamp="1662206875623" complexity="0" version="0.1">
+<coverage lines-valid="35" lines-covered="34" line-rate="0.9714" branches-valid="3" branches-covered="3" branch-rate="1" timestamp="1662314542775" complexity="0" version="0.1">
   <sources>
     <source>C:\Users\Murilo\Documents\GitHub\DevOpsExtension</source>
   </sources>
